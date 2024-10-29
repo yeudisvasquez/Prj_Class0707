@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:local="clr-namespace:Prj_Class0707.VistaModelo"
+             x:Class="Prj_Class0707.Vistas.MenuOpciones.MenuPrincipal"
+             Title="MENU PRINCIPAL">
+
+    <Grid BackgroundColor="White"
+          RowDefinitions="560, *"
+          RowSpacing="20"
+          Padding="15">
+        <Frame
+            Grid.Row="0"
+            BackgroundColor="Transparent"
+            CornerRadius="12"
+            BorderColor="Blue">
+            <Grid
+                RowDefinitions="*,*,*,*,*,*">
+                <StackLayout 
+                    Orientation="Vertical"
+                    Grid.Row="0">
+                    <forms:AnimationView x:Name="animacion" 
+                                         Animation="dataMaintenance.json"
+                                         HeightRequest="130"
+                                         HorizontalOptions="Center"
+                                         WidthRequest="1500"
+                                         AutoPlay="true"
+                                         RepeatMode="Infinite"/>
+                </StackLayout>
+                <StackLayout
+                    Orientation="Vertical"
+                    Grid.Row="2"
+                    Margin="-48">
+                    <Label 
+                        HorizontalOptions="Center"
+                        Text="MANTENIMIENTO"
+                        TextColor="Black"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MantenimientoCommand}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Orientation="Vertical"
+                    Grid.Row="2">
+                    <forms:AnimationView x:Name="animacion1" 
+                                         Animation="dataReports.json"
+                                         HeightRequest="130"
+                                         HorizontalOptions="Center"
+                                         WidthRequest="150"
+                                         AutoPlay="True"
+                                         RepeatMode="Infinite"/>
+                </StackLayout>
+                <StackLayout
+                    Orientation="Vertical"
+                    Grid.Row="4"
+                    Margin="-34">
+                    <Label                     
+                        HorizontalOptions="Center"
+                        Text="REPORTES"
+                        TextColor="Black"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ReportesCommand}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout
+                    Orientation="Vertical"
+                    Grid.Row="4">
+                    <forms:AnimationView x:Name="animacion2" 
+                                         Animation="WorkStruct.json"
+                                         HeightRequest="130"
+                                         HorizontalOptions="Center"
+                                         WidthRequest="150"
+                                         AutoPlay="true"
+                                         RepeatMode="Infinite">
+                    </forms:AnimationView>
+                </StackLayout>
+                <StackLayout
+                    Orientation="Vertical"
+                    Grid.Row="5"
+                    Margin="32">
+                    <Label
+                        x:Name="desarrolladorLabel"
+                        Text="DESARROLLADO POR"
+                        TextColor="Black"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DesarrolladorCommand}" />
+                        </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+        </Frame>
+
+        <Frame
+            Grid.Row="1"
+            BackgroundColor="Transparent"
+            BorderColor="Blue"
+            CornerRadius="12">
+            <Grid>
+                <StackLayout
+                    Orientation="Vertical"
+                    Grid.Column="0"
+                    Grid.Row="0">
+                    <Label  TextColor="Blue"
+                            Text="Usuario Conectado:"
+                            FontSize="20"
+                            HorizontalOptions="CenterAndExpand"
+                            FontAttributes="Bold" />
+                </StackLayout>
+                <StackLayout
+                    Orientation="Vertical"
+                    Grid.Column="0"
+                    Grid.Row="1">
+                    <Label  
+                        TextColor="Black"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand"
+                        FontAttributes="Bold" 
+                        Padding="2"
+                        x:Name="txtusuariologueado"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

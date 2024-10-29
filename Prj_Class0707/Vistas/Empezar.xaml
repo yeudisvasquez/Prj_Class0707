@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="Prj_Class0707.Vistas.Empezar"
+             Title="PANTALLA DE INICIO">
+<Grid>
+    <StackLayout>
+        <Grid 
+            BackgroundColor="White"
+            RowDefinitions="150"
+            RowSpacing="25"
+            Padding="25">
+            <Frame
+                CornerRadius="15"
+                BackgroundColor="White"
+                BorderColor="#1C76D2">
+                <StackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                    <Grid>
+                        <Label Grid.Column="1"
+                               Text="REGISTRO DE DOCTORES"
+                               FontSize="25"
+                               FontAttributes="Bold"
+                               Margin="-5"/>
+                        <Image Source="dataworld.png"
+                               WidthRequest="80"
+                               VerticalOptions="Center"
+                               Grid.Column="0"
+                               Margin="-30"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <Grid
+             BackgroundColor="White"
+             RowDefinitions="150, *"
+             RowSpacing="25"
+             Padding="25">
+            <Frame
+                CornerRadius="15"
+                BackgroundColor="White"
+                BorderColor="#1C76D2">
+                <StackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                    <Grid>
+                        <Label Grid.Column="1"
+                               Text="BIENVENIDOS"
+                               FontSize="25"
+                               FontAttributes="Bold"
+                               Margin="-5"/>
+                        <Image Source="Bienvenido.png"
+                               WidthRequest="80"
+                               VerticalOptions="Center"
+                               Grid.Column="0"
+                               Margin="-30"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </Grid>
+            <Grid
+            BackgroundColor="White"
+            RowDefinitions="125"
+            RowSpacing="25"
+            Padding="25"> 
+                <Frame
+                    CornerRadius="15"
+                    BackgroundColor="White"
+                    BorderColor="#1C76D2">
+                    <StackLayout
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                        <Grid>
+                            <Button 
+                                Text="Empezar"
+                                TextColor="White"
+                                BackgroundColor="#2D50B5"
+                                FontAttributes="Bold"
+                                CornerRadius="50"
+                                Command="{Binding NavegarLogincommad}"/>
+                            <Image Source="logout.png"
+                                   HeightRequest="30"
+                                   HorizontalOptions="End"
+                                   BackgroundColor="Transparent"
+                                   Margin="0,0,18,0"/>      
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>

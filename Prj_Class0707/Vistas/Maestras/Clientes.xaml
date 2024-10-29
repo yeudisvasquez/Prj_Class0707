@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prj_Class0707.Vistas.Maestras.Clientes"
+             NavigationPage.HasNavigationBar="True"
+             Title="DOCTOR">
+    <Grid RowDefinitions="1"
+          >
+
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0,1">
+                <GradientStop Color="white" Offset="0.2"/>
+                <GradientStop Color="LightBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <StackLayout>
+            <Image Source="usuario.png"
+                          HeightRequest="25"
+                     BackgroundColor="white"
+                     HorizontalOptions="End"
+                     Margin="0,-5,0,0" />
+        </StackLayout>
+
+
+        <ImageButton Source="flechaizq.png"
+                          HeightRequest="30"
+                     BackgroundColor="Transparent"
+                     
+                     HorizontalOptions="Start"
+                     Margin="10,40,10,10"
+                         Command="{Binding Volvercomamd}"/>
+        <Frame Grid.Row="1" Padding="0"
+                   Margin="10" CornerRadius="15"
+                   BackgroundColor="Transparent">
+            <StackLayout Margin="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre Doctor:"
+                           FontSize="14"
+                           FontAttributes="None"
+                           VerticalOptions="Center"
+                           TextColor="black"/>
+
+                    <Entry FontSize="14"
+                           
+                               Placeholder="Nombre Completo"
+                               HorizontalOptions="FillAndExpand"
+                               TextColor="black"
+                               Text="{Binding TxtNombrecompleto}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Cédula:"
+                           FontSize="14"
+                           FontAttributes="None"
+                           VerticalOptions="Center"
+                           TextColor="black"/>
+                    <Entry FontSize="14"
+                               Placeholder="Identificación"
+                               HorizontalOptions="FillAndExpand"
+                               TextColor="black"
+                               Text="{Binding Txtidentificacion}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Estatus:"
+                           FontSize="14"
+                           FontAttributes="None"
+                           VerticalOptions="Center"
+                           TextColor="black"/>
+                    <Entry FontSize="14"
+                               Placeholder="Estatus"
+                               HorizontalOptions="FillAndExpand"
+                               TextColor="black"
+                               Text="{Binding Txtcelular}"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fecha Naci:"
+                           FontSize="14"
+                           FontAttributes="None"
+                           VerticalOptions="Center"
+                           TextColor="black"/>
+                    <Entry FontSize="14"
+                               Placeholder="Fecha Nacimiento"
+                               HorizontalOptions="FillAndExpand"
+                               TextColor="black"
+                               Text="{Binding Txttelefono}"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Dirección:"
+                           FontSize="14"
+                           FontAttributes="None"
+                           VerticalOptions="Center"
+                           TextColor="black"/>
+                    <Entry FontSize="14"
+                               Placeholder="Dirección"
+                               HorizontalOptions="FillAndExpand"
+                               TextColor="black"
+                               Text="{Binding Txtdireccion}"/>
+                </StackLayout>
+
+
+                    <StackLayout>
+
+                    </StackLayout>
+                <StackLayout>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Start"
+                     Margin="20,30,0,0"
+                    >
+
+                    <Button Text="Guardar"
+                            TextColor="White"
+                            HorizontalOptions="CenterAndExpand"
+                            CornerRadius="15"
+                            BackgroundColor="Blue"
+                            FontAttributes="Bold"
+                            VerticalOptions="EndAndExpand"
+                            Command="{Binding Insertarcomamd}"/>
+
+                    <Button Text="Actualizar"                            
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            CornerRadius="15"
+                            BackgroundColor="Blue"
+                            FontAttributes="Bold"
+                            VerticalOptions="EndAndExpand"
+                            Command="{Binding updateclientecommand}"/>
+
+                    <Button Text="Eliminar"                            
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            CornerRadius="15"
+                            BackgroundColor="Blue"
+                            FontAttributes="Bold"
+                            VerticalOptions="EndAndExpand"
+                            Command="{Binding Eliminarclientecomamd}"/>
+
+                </StackLayout>
+            </StackLayout>
+
+        </Frame>
+
+    </Grid>
+</ContentPage>

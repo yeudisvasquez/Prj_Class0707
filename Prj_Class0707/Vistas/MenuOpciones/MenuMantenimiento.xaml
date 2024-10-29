@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="Prj_Class0707.Vistas.MenuOpciones.MenuMantenimiento"
+             Title="MENU MANTENIMIENTO">
+    <Grid
+        BackgroundColor="White"
+        RowDefinitions="150, *"
+        Padding="25"
+        RowSpacing="25">
+        <Frame
+            Grid.Row="0"
+            BackgroundColor="Transparent"
+            BorderColor="Blue"
+            CornerRadius="12">
+            <StackLayout>
+                <Label 
+                    Text="Data Doctores"
+                    FontSize="25"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"/>
+
+                <Grid>
+                    <StackLayout Grid.Column="0">
+                        <forms:AnimationView x:Name="animacion"
+                                             Animation="Doctors.json"
+                                             HeightRequest="100"
+                                             HorizontalOptions="Center"
+                                             WidthRequest="160"
+                                             AutoPlay="true"
+                                             RepeatMode="Infinite"
+                                             VerticalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout>
+        </Frame>
+        <Frame
+            Grid.Row="1"
+            BackgroundColor="Transparent"
+            BorderColor="Blue"
+            CornerRadius="12">
+            <Grid
+                RowDefinitions="*,*,*,*,*">
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Grid.Row="0">
+                    <Image 
+                        Source="security.png"
+                        Grid.Column="0"
+                        WidthRequest="40"/>
+                    <Label
+                        Text="Doctor"
+                        TextColor="Black"
+                        FontSize="20"
+                        Grid.Column="1"
+                        VerticalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavegarClientescommad}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Grid.Row="1">
+                    <Image 
+                        Source="world.png"
+                        Grid.Column="0"
+                        WidthRequest="40"/>
+                    <Label
+                        Text="Pais"
+                        TextColor="Black"
+                        FontSize="20"
+                        Grid.Column="1"
+                        VerticalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavegarMedicoscommand}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>
